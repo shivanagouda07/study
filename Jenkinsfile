@@ -1,23 +1,22 @@
 pipeline {
-  agent any;
-  stages {
-    stage ('BUILD') {
-      steps {
-        echo "This is build"
-          sh 'sleep 5'
-      }
+    agent any
+
+    stages {
+        stage('Checkout Code') {
+            steps {
+                git 'https://github.com/shivanagouda07/study.git'
+            }
+        }
+
+        stage('Run even.py') {
+            steps {
+                sh '''
+                  echo "Running even.py"
+                  ls -l
+                  python3 even.py
+                '''
+            }
+        }
     }
-     stage ('DEPLOY') {
-      steps {
-        echo "This is deploy"
-         sh 'sleep 5'
-      }
-    }
-     stage ('TEST') {
-      steps {
-        echo "This is test"
-         sh 'sleep 5'
-      }
-    }
-  }
 }
+   

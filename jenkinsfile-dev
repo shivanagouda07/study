@@ -12,6 +12,10 @@ pipeline {
       }
     }
     stage("run the first.py") {
+      agent {
+  label 'jenkins-label'
+}
+
       steps {
           sh ''' 
                 python3 first.py

@@ -6,7 +6,7 @@ pipeline {
             sh '''
                   python3 even.py
                     ls
-                    echo "this is check whether its running or not
+                    echo "this is check whether its running or not"
               '''
       }
     }  

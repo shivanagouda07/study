@@ -10,6 +10,12 @@ pipeline {
                     echo "this is check whether its running or not"
               '''
       }
-    }  
+    }
+    stage("run the first.py") {
+      steps {
+          sh ''' 
+                python3 first.py
+                echo "This is first.py program"
+
   }
 }

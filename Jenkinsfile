@@ -1,5 +1,6 @@
 pipeline {
     agent any
+    stage{
         stage('Run even.py') {
             steps {
                 sh '''
@@ -10,5 +11,6 @@ pipeline {
             }
         }
     }
+}
 
    

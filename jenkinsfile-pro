@@ -1,7 +1,7 @@
 pipeline {
   agent any
      stages {
-        stage("Test stage" {
+        stage("Test stage") {
           steps {
               sh '''
                 echo "exceute the program"
@@ -10,10 +10,9 @@ pipeline {
           }
       }
       stage("Build stage"){
-     agent {
-  label 'jenkins-label'
-}
-
+         agent {
+                label 'jenkins-label'
+              }
         steps {
           sh '''
             echo "This is where build stage"

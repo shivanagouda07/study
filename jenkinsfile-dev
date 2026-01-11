@@ -1,0 +1,14 @@
+pipeline {
+  agent any
+    stages {
+      stage ("This is programs") {
+          steps {  
+            sh '''
+                  python3 even.py
+                    ls
+                    echo "this is check whether its running or not
+              '''
+      }
+    }  
+  }
+}

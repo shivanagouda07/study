@@ -16,8 +16,9 @@ pipeline {
           sh ''' 
                 python3 first.py
                 echo "This is first.py program"
-}
-}
+              '''
+            }
+       }
 
-  }
+    }
 }

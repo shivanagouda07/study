@@ -1,0 +1,25 @@
+pipeline {
+  agent any
+     stages {
+        stage("Test stage" {
+          steps {
+              sh '''
+                echo "exceute the program"
+                  python even.py
+                 '''
+          }
+      }
+      stage("Build stage"){
+     agent {
+  label 'jenkins-label'
+}
+
+        steps {
+          sh '''
+            echo "This is where build stage"
+              python3 first.py
+                ls '''
+        }
+       }
+  }
+}

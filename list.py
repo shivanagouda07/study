@@ -51,8 +51,6 @@ print(val)
 
 
   # tuples  are used to collection of the data
+  # once we declare , we can not change or modify the numbers
 numbers = (7,9,4,5,2,3)
-print(numbers)
-numbers[2] = 10
-
 print(numbers)
